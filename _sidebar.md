@@ -2,4 +2,3 @@
   - [产品介绍](/getstarted/concept)
   - [产品架构](/getstarted/architecture)
   - [准备工作](/getstarted/ready)
-- **快速开始**
