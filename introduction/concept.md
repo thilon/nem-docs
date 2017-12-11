@@ -1,6 +1,6 @@
-### 账号
-### 交易
-### 消息
-### 命名空间
-### 马赛克
-### 多重签名
+### 账号(Account)
+### 交易(Transaction)
+### 消息(Message)
+### 命名空间(Namespace)
+### 马赛克(Mosaics)
+### 多重签名(Multisig)
