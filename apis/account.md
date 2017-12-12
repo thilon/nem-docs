@@ -4,7 +4,6 @@
 
 ```
 GET /account/generate
-Content-Type: application/json
 ```
 
 **响应报文**
