@@ -39,7 +39,7 @@ http://127.0.0.1:7890/account/generate
 **请求语法**
 
 ```
-GET /account/get/<address>
+GET /account/get?address=<address>
 ```
 **请求参数**
 
@@ -108,7 +108,7 @@ http://127.0.0.1:7890/account/get?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2T
 **请求语法**
 
 ```
-GET /account/get/from-public-key/?publickey=<PublicKey>
+GET /account/get/from-public-key?publickey=<PublicKey>
 ```
 **请求参数**
 
@@ -177,7 +177,7 @@ http://127.0.0.1:7890/account/get/from-public-key?publicKey=f9bd190dd0c364261f5c
 **请求语法**
 
 ```
-GET /account/get/forwarded/?address=<address>
+GET /account/get/forwarded?address=<address>
 ```
 **请求参数**
 
