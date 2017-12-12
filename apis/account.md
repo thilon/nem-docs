@@ -35,6 +35,7 @@ http://127.0.0.1:7890/account/generate
 GET /account/get/<address>
 ```
 **请求参数**
+
 |参数|类型|必填|说明|
 |:---|:---|:---:|:---|
 |address|String|是|查询账户的地址|
