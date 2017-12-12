@@ -2,8 +2,6 @@
   - [产品概述](/introduction/summary)
   - [基本概念](/introduction/concept)
 - **快速入门**
-- **开发指南**
-  - [准备]
 - **API参考**
   - [准备](/apis/prepare)
   - [账号](/apis/account)
