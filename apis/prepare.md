@@ -27,8 +27,9 @@
  http://127.0.0.1:7890<path to API request>?<parameters>
  ```
  
+ **请求示例**
+ 
  ```
- 请求示例
  http://127.0.0.1:7890/account/get?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
  ```
  
