@@ -22,7 +22,10 @@
  
  **请求格式**
  
+ 
+```
  http://127.0.0.1:7890<path to API request>?<parameters>
+ ```
  
  ```
  请求示例
