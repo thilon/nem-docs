@@ -26,3 +26,38 @@ http://127.0.0.1:7890/account/generate
     "publicKey": "c2e19751291d01140e62ece9ee3923120766c6302e1099b04014fe1009bc89d3"
 }
 ```
+
+### 获取账户信息
+
+**请求语法**
+
+```
+```
+**请求参数**
+|参数|类型|必填|说明|
+:---|:---|:---:|:---|
+|address|String|是|查询账户的地址
+
+**响应报文**
+
+```
+{
+    "account":
+    {
+        "address": <Address>,
+        "balance": <Balance>,
+        "vestedBalance": <Vested Balance>,
+        "importance": <POI>,
+        "publicKey": <Public Key>,
+        "label": <null>,
+        "harvestedBlocks": <Harvested blocks>
+    },
+    "meta":
+    {
+        "cosignatoryOf": [ ],
+        "cosignatories": [ ],
+        "status": <Account status>,
+        "remoteStatus": <Remote node status>
+    }
+}
+```
