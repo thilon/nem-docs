@@ -5,4 +5,4 @@
 - **开发指南**
  - [准备]
  - **API参考**
-  - [账号](/apis/account)
+  -- [账号](/apis/account)
