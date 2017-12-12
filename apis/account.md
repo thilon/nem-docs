@@ -32,6 +32,7 @@ http://127.0.0.1:7890/account/generate
 **请求语法**
 
 ```
+GET /account/get/<address>
 ```
 **请求参数**
 |参数|类型|必填|说明|
