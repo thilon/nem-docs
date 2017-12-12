@@ -4,4 +4,5 @@
 - **快速入门**
 - **API参考**
   - [准备](/apis/prepare)
+  - [服务器](/apis/nis)
   - [账号](/apis/account)
