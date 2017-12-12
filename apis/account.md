@@ -64,10 +64,17 @@ GET /account/get/<address>
 }
 ```
 
-**示例**
+**请求示例**
 
 ```
 http://127.0.0.1:7890/account/get?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
+```
+
+**返回格式**
+
+>JSON格式
+
+```
 {
     "account":
     {
