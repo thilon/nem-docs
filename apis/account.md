@@ -1,4 +1,4 @@
-###  创建账户
+### 创建账户
 
 **请求语法**
 
@@ -16,10 +16,17 @@ GET /account/generate
 }
 ```
 
-**示例**
+**请求示例**
 
 ```
 http://127.0.0.1:7890/account/generate
+```
+
+**返回格式**
+
+>JSON格式
+
+```
 {
     "privateKey": "0962c6505d02123c40e858ff8ef21e2b7b5466be12c4770e3bf557aae828390f",
     "address": "NCKMNCU3STBWBR7E3XD2LR7WSIXF5IVJIDBHBZQT",
