@@ -309,3 +309,44 @@ http://127.0.0.1:7890/account/get/forwarded/from-public-key?publicKey=bdd8dd702a
     }
 }
 ```
+
+### 获取账户状态
+
+**请求语法**
+
+```
+GET /account/status?address=<account address>
+```
+**请求参数**
+
+|参数|类型|必填|说明|
+|:---|:---|:---:|:---|
+|address|String|是|账户地址|
+
+**响应报文**
+
+```
+{
+    "cosignatoryOf": [ ],
+    "status": "LOCKED",
+    "remoteStatus": "ACTIVE"
+}
+```
+
+**请求示例**
+
+```
+http://127.0.0.1:7890/account/status?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
+```
+
+**返回格式**
+
+>JSON格式
+
+```
+{
+    "cosignatoryOf": [ ],
+    "status": "LOCKED",
+    "remoteStatus": "ACTIVE"
+}
+```
