@@ -5,5 +5,5 @@
 - **开发指南**
   - [准备]
 - **API参考**
- - [准备](/apis/prepare)
- - [账号](/apis/account)
+  - [准备](/apis/prepare)
+  - [账号](/apis/account)
