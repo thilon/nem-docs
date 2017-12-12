@@ -11,8 +11,8 @@ GET /account/generate
 ```
 {
     "privateKey": <Private Key>,
-    "address": "Address",
-    "publicKey": "Public key"
+    "address": <Address>,
+    "publicKey": <Public key>
 }
 ```
 
