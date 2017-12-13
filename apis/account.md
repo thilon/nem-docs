@@ -481,3 +481,45 @@ http://127.0.0.1:7890/account/transfers/all?address=TALICELCD3XPH4FFI5STGGNSNSWP
 **返回参数**
 
 同转出交易和转入交易
+
+### 获取账户的全部命名空间
+
+**请求语法**
+
+```
+GET /account/namespace/page?address=<account address>&parent=<parent namespace id>&id=<id>&pageSize=<page size>
+```
+**请求参数**
+
+|参数|类型|必填|说明|
+|:---|:---|:---:|:---|
+|address|String|是|账户地址|
+|parent|String|可选|上级命名空间的id|
+|id|Integer|可选||
+|pageSize|Integer|可选|返回的命名空间数量|
+
+**响应参数**
+
+|参数|类型|说明|
+|:---|:---|:---|
+|fqn|String|命名空间名称|
+|owner|String|该命名空间的拥有账户地址|
+|height|Integer|该命名空间所在的区块id|
+
+**请求示例**
+
+```
+http://127.0.0.1:7890/account/namespace/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH&parent=makoto.metal
+```
+
+**返回参数**
+
+```
+{
+        "data": [{
+        "fqn": "makoto.metal.coins",
+        "owner": TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
+        "height": 13465
+        }]
+}
+```
