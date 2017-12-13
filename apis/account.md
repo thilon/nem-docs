@@ -6,15 +6,17 @@
 GET /account/generate
 ```
 
-**响应报文**
+**请求参数**
 
-```
-{
-    "privateKey": <Private Key>,
-    "address": <Address>,
-    "publicKey": <Public key>
-}
-```
+无
+
+**响应参数**
+
+|参数|类型|说明|
+|:---|:---|:---|
+|privateKey|String|返回新创建账户的私匙|
+|address|String|返回新创建账户的地址|
+|publicKey|String|返回新创建账户的公匙|
 
 **请求示例**
 
@@ -22,7 +24,7 @@ GET /account/generate
 http://127.0.0.1:7890/account/generate
 ```
 
-**返回格式**
+**返回示例**
 
 >JSON格式
 
@@ -41,35 +43,28 @@ http://127.0.0.1:7890/account/generate
 ```
 GET /account/get?address=<address>
 ```
+
 **请求参数**
 
 |参数|类型|必填|说明|
 |:---|:---|:---:|:---|
 |address|String|是|查询账户的地址|
 
-**响应报文**
+**响应参数**
 
-```
-{
-    "account":
-    {
-        "address": <Address>,
-        "balance": <Balance>,
-        "vestedBalance": <Vested Balance>,
-        "importance": <POI>,
-        "publicKey": <Public Key>,
-        "label": <null>,
-        "harvestedBlocks": <Harvested blocks>
-    },
-    "meta":
-    {
-        "cosignatoryOf": [ ],
-        "cosignatories": [ ],
-        "status": <Account status>,
-        "remoteStatus": <Remote node status>
-    }
-}
-```
+|参数|类型|说明|
+|:---|:---|:---|
+|address|String|账户的地址|
+|balance|Double|账户的余额|
+|vestedBalance|Double|账户的归属余额|
+|importance|Double|账户的重要性值|
+|publicKey|String|账户的公匙|
+|label|String|null|
+|harvestedBlocks|Integer|收获的块数量|
+|cosignatoryOf|||
+|cosignatories|||
+|status|String|该账号状态|
+|remoteStatus|String|远程节点状态|
 
 **请求示例**
 
@@ -77,7 +72,7 @@ GET /account/get?address=<address>
 http://127.0.0.1:7890/account/get?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
 ```
 
-**返回格式**
+**返回示例**
 
 >JSON格式
 
@@ -116,29 +111,9 @@ GET /account/get/from-public-key?publickey=<PublicKey>
 |:---|:---|:---:|:---|
 |PublicKey|String|是|查询账户的公匙|
 
-**响应报文**
+**响应参数**
 
-```
-{
-    "account":
-    {
-        "address": <Address>,
-        "balance": <Balance>,
-        "vestedBalance": <Vested Balance>,
-        "importance": <POI>,
-        "publicKey": <Public Key>,
-        "label": <null>,
-        "harvestedBlocks": <Harvested blocks>
-    },
-    "meta":
-    {
-        "cosignatoryOf": [ ],
-        "cosignatories": [ ],
-        "status": <Account status>,
-        "remoteStatus": <Remote node status>
-    }
-}
-```
+同上
 
 **请求示例**
 
@@ -146,7 +121,7 @@ GET /account/get/from-public-key?publickey=<PublicKey>
 http://127.0.0.1:7890/account/get/from-public-key?publicKey=f9bd190dd0c364261f5c8a74870cc7f7374e631352293c62ecc437657e5de2cd
 ```
 
-**返回格式**
+**返回示例**
 
 >JSON格式
 
@@ -187,27 +162,7 @@ GET /account/get/forwarded?address=<address>
 
 **响应报文**
 
-```
-{
-    "account":
-    {
-        "address": <Address>,
-        "balance": <Balance>,
-        "vestedBalance": <Vested Balance>,
-        "importance": <POI>,
-        "publicKey": <Public Key>,
-        "label": <null>,
-        "harvestedBlocks": <Harvested blocks>
-    },
-    "meta":
-    {
-        "cosignatoryOf": [ ],
-        "cosignatories": [ ],
-        "status": <Account status>,
-        "remoteStatus": <Remote node status>
-    }
-}
-```
+同上
 
 **请求示例**
 
@@ -215,7 +170,7 @@ GET /account/get/forwarded?address=<address>
 http://127.0.0.1:7890/account/get/forwarded?address=NC2ZQKEFQIL3JZEOB2OZPWXWPOR6LKYHIROCR7PK
 ```
 
-**返回格式**
+**返回示例**
 
 >JSON格式
 
@@ -254,29 +209,9 @@ GET /account/get/forwarded/from-public-key?publickey=<delegate account publickey
 |:---|:---|:---:|:---|
 |publickey|String|是|委托账户的公匙|
 
-**响应报文**
+**响应参数**
 
-```
-{
-    "account":
-    {
-        "address": <Address>,
-        "balance": <Balance>,
-        "vestedBalance": <Vested Balance>,
-        "importance": <POI>,
-        "publicKey": <Public Key>,
-        "label": <null>,
-        "harvestedBlocks": <Harvested blocks>
-    },
-    "meta":
-    {
-        "cosignatoryOf": [ ],
-        "cosignatories": [ ],
-        "status": <Account status>,
-        "remoteStatus": <Remote node status>
-    }
-}
-```
+同上
 
 **请求示例**
 
@@ -284,7 +219,7 @@ GET /account/get/forwarded/from-public-key?publickey=<delegate account publickey
 http://127.0.0.1:7890/account/get/forwarded/from-public-key?publicKey=bdd8dd702acb3d88daf188be8d6d9c54b3a29a32561a068b25d2261b2b2b7f02
 ```
 
-**返回格式**
+**返回格示例**
 
 >JSON格式
 
@@ -325,6 +260,12 @@ GET /account/status?address=<account address>
 
 **响应报文**
 
+|参数|类型|说明|
+|:---|:---|:---|
+|cosignatoryOf|||
+|status|String|该账号状态|
+|remoteStatus|String|远程节点状态|
+
 ```
 {
     "cosignatoryOf": [ ],
@@ -339,7 +280,7 @@ GET /account/status?address=<account address>
 http://127.0.0.1:7890/account/status?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
 ```
 
-**返回格式**
+**返回参数**
 
 >JSON格式
 
