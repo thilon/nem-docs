@@ -307,7 +307,7 @@ GET /account/transfer/incoming?address=<account address>&hash=<hash>&id=<id>
 |hash|String|可选|交易的hash值，不填时将返回最新的交易，填写时返回该hash交易之前的交易，最多25笔交易|
 |id|String|可选|交易的id值，不填时将返回最新的交易，填写时返回该id交易之前的交易，最多25笔交易|
 
-!> hash和id不能同时出现
+!> 注意：hash和id不能同时出现
 
 **响应参数**
 
@@ -410,7 +410,7 @@ GET /account/transfer/outgoing?address=<account address>&hash=<hash>&id=<id>
 |hash|String|可选|交易的hash值，不填时将返回最新的交易，填写时返回该hash交易之前的交易，最多25笔交易|
 |id|String|可选|交易的id值，不填时将返回最新的交易，填写时返回该id交易之前的交易，最多25笔交易|
 
-!> hash和id不能同时出现
+!> 注意：hash和id不能同时出现
 
 **响应参数**
 
