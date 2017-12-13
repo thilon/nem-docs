@@ -266,14 +266,6 @@ GET /account/status?address=<account address>
 |status|String|该账号状态|
 |remoteStatus|String|远程节点状态|
 
-```
-{
-    "cosignatoryOf": [ ],
-    "status": "LOCKED",
-    "remoteStatus": "ACTIVE"
-}
-```
-
 **请求示例**
 
 ```
@@ -297,7 +289,7 @@ http://127.0.0.1:7890/account/status?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4D
 **请求语法**
 
 ```
-GET /account/transfer/incoming?address=<account address>&hash=<hash>&id=<id>
+GET /account/transfers/incoming?address=<account address>&hash=<hash>&id=<id>
 ```
 **请求参数**
 
@@ -316,14 +308,6 @@ GET /account/transfer/incoming?address=<account address>&hash=<hash>&id=<id>
 |cosignatoryOf|||
 |status|String|该账号状态|
 |remoteStatus|String|远程节点状态|
-
-```
-{
-    "cosignatoryOf": [ ],
-    "status": "LOCKED",
-    "remoteStatus": "ACTIVE"
-}
-```
 
 **请求示例**
 
@@ -400,7 +384,7 @@ http://127.0.0.1:7890/account/transfers/incoming?address=TALICELCD3XPH4FFI5STGGN
 **请求语法**
 
 ```
-GET /account/transfer/outgoing?address=<account address>&hash=<hash>&id=<id>
+GET /account/transfers/outgoing?address=<account address>&hash=<hash>&id=<id>
 ```
 **请求参数**
 
@@ -420,18 +404,78 @@ GET /account/transfer/outgoing?address=<account address>&hash=<hash>&id=<id>
 |status|String|该账号状态|
 |remoteStatus|String|远程节点状态|
 
-```
-{
-    "cosignatoryOf": [ ],
-    "status": "LOCKED",
-    "remoteStatus": "ACTIVE"
-}
-```
-
 **请求示例**
 
 ```
 http://127.0.0.1:7890/account/transfers/outgoing?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a22
+```
+
+**返回参数**
+
+>JSON格式
+
+```
+{
+        "data": [
+        {
+        "meta":
+        {
+        "id": 70498,
+        "height": 40803,
+        "hash": {
+        "data":"37c34ead4c3fe6af42d994135798262f785ba2d807c02ac3608bc10da12e5f87"
+        }
+        },
+        "transaction":
+        {
+        "timeStamp": 9111526,
+        "amount": 1000000000,
+        "signature": "651a19ccd09c1e0f8b25f6a0aac5825b0a20f158ca4e0d78f2abd904a3966b6e3599a47b9ff199a3a6e1152231116fa4639fec684a56909c22cbf6db66613901",
+        "fee": 3000000,
+        "recipient": "TDGIMREMR5NSRFUOMPI5OOHLDATCABNPC5ID2SVA",
+        "type": 257,
+        "deadline": 9154726,
+        "message":
+        {
+        "payload": "74657374207472616e73616374696f6e",
+        "type": 1
+        },
+        "version": -1744830463,
+        "signer": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+        }
+        }]
+}
+```
+
+### 获取账户全部交易
+
+**请求语法**
+
+```
+GET /account/transfers/all?address=<account address>&hash=<hash>&id=<id>
+```
+**请求参数**
+
+|参数|类型|必填|说明|
+|:---|:---|:---:|:---|
+|address|String|是|账户地址|
+|hash|String|可选|交易的hash值，不填时将返回最新的交易，填写时返回该hash交易之前的交易，最多25笔交易|
+|id|String|可选|交易的id值，不填时将返回最新的交易，填写时返回该id交易之前的交易，最多25笔交易|
+
+!> 注意：hash和id不能同时出现
+
+**响应参数**
+
+|参数|类型|说明|
+|:---|:---|:---|
+|cosignatoryOf|||
+|status|String|该账号状态|
+|remoteStatus|String|远程节点状态|
+
+**请求示例**
+
+```
+http://127.0.0.1:7890/account/transfers/all?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a22
 ```
 
 **返回参数**
