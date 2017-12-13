@@ -245,6 +245,55 @@ http://127.0.0.1:7890/account/get/forwarded/from-public-key?publicKey=bdd8dd702a
 }
 ```
 
+### 获取账户转入的交易
+
+**请求语法**
+
+```
+GET /account/transfer/incoming?address=<account address>&hash=<hash>&id=<id>
+```
+**请求参数**
+
+|参数|类型|必填|说明|
+|:---|:---|:---:|:---|
+|address|String|是|账户地址|
+|hash|String|可选|账户地址|
+|id|String|可选|账户地址|
+
+**响应参数**
+
+|参数|类型|说明|
+|:---|:---|:---|
+|cosignatoryOf|||
+|status|String|该账号状态|
+|remoteStatus|String|远程节点状态|
+
+```
+{
+    "cosignatoryOf": [ ],
+    "status": "LOCKED",
+    "remoteStatus": "ACTIVE"
+}
+```
+
+**请求示例**
+
+```
+http://127.0.0.1:7890/account/status?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
+```
+
+**返回参数**
+
+>JSON格式
+
+```
+{
+    "cosignatoryOf": [ ],
+    "status": "LOCKED",
+    "remoteStatus": "ACTIVE"
+}
+```
+
 ### 获取账户状态
 
 **请求语法**
