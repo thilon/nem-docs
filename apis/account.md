@@ -258,7 +258,7 @@ GET /account/status?address=<account address>
 |:---|:---|:---:|:---|
 |address|String|是|账户地址|
 
-**响应报文**
+**响应参数**
 
 |参数|类型|说明|
 |:---|:---|:---|
