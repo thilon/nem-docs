@@ -160,7 +160,7 @@ GET /account/get/forwarded?address=<address>
 |:---|:---|:---:|:---|
 |address|String|是|委托账户的地址|
 
-**响应报文**
+**响应参数**
 
 同上
 
