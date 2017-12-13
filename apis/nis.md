@@ -56,16 +56,6 @@ GET /status
 
 无
 
-**响应报文**
-
-```
-{
-  "code": <Code>,
-  "type": 4,
-  "message": <Message>
-}
-```
-
 **响应参数**
 
 type为4时的响应码
