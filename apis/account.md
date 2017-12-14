@@ -219,7 +219,7 @@ GET /account/get/forwarded/from-public-key?publickey=<delegate account publickey
 http://127.0.0.1:7890/account/get/forwarded/from-public-key?publicKey=bdd8dd702acb3d88daf188be8d6d9c54b3a29a32561a068b25d2261b2b2b7f02
 ```
 
-**返回格示例**
+**返回示例**
 
 >JSON格式
 
@@ -272,7 +272,7 @@ GET /account/status?address=<account address>
 http://127.0.0.1:7890/account/status?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS
 ```
 
-**返回参数**
+**返回示例**
 
 >JSON格式
 
@@ -315,7 +315,7 @@ GET /account/transfers/incoming?address=<account address>&hash=<hash>&id=<id>
 http://127.0.0.1:7890/account/transfers/incoming?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a2
 ```
 
-**返回参数**
+**返回示例**
 
 >JSON格式
 
@@ -410,7 +410,7 @@ GET /account/transfers/outgoing?address=<account address>&hash=<hash>&id=<id>
 http://127.0.0.1:7890/account/transfers/outgoing?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a22
 ```
 
-**返回参数**
+**返回示例**
 
 >JSON格式
 
@@ -478,7 +478,7 @@ GET /account/transfers/all?address=<account address>&hash=<hash>&id=<id>
 http://127.0.0.1:7890/account/transfers/all?address=TALICELCD3XPH4FFI5STGGNSNSWPOTG5E4DS2TOS&hash=949583a20ebdfdcb58277eb42fef3e66e9e6bbfc47304d8741a82c68f7c53a22
 ```
 
-**返回参数**
+**返回示例**
 
 同转出交易和转入交易
 
@@ -513,7 +513,7 @@ GET /account/namespace/page?address=<account address>&parent=<parent namespace i
 http://127.0.0.1:7890/account/namespace/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH&parent=makoto.metal
 ```
 
-**返回参数**
+**返回示例**
 
 ```
 {
@@ -559,7 +559,7 @@ GET /account/mosaic/definition/page?address=<address>&parent=<parent namespace i
 http://127.0.0.1:7890/account/mosaic/definition/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH&parent=makoto.metal.coins
 ```
 
-**返回参数**
+**返回示例**
 
 ```
 {
@@ -615,7 +615,7 @@ GET /account/mosaic/owned?address=<address>
 http://127.0.0.1:7890/account/mosaic/owned?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH
 ```
 
-**返回参数**
+**返回示例**
 
 ```
 {
