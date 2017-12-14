@@ -539,7 +539,7 @@ GET /account/mosaic/definition/page?address=<address>&parent=<parent namespace i
 |:---|:---|:---:|:---|
 |address|String|是|账户地址|
 |parent|String|可选|上级命名空间的id|
-|id|Integer|可选||
+|id|Integer|可选| |
 
 **响应参数**
 
@@ -583,6 +583,54 @@ http://127.0.0.1:7890/account/mosaic/definition/page?address=TD3RXTHBLK6J3UD2BH2
         "name": "transferable",
         "value": "true"
         }]
+        }]
+}
+```
+
+### 获取账户拥有的马赛克
+
+**请求语法**
+
+```
+GET /account/mosaic/owned?address=<address>
+```
+
+**请求参数**
+
+|参数|类型|必填|说明|
+|:---|:---|:---:|:---|
+|address|String|是|账户地址|
+
+**响应参数**
+
+|参数|类型|说明|
+|:---|:---|:---|
+|namespaceId|String|马赛克所在的命名空间的id|
+|name|Integer|马赛克所在的命名空间的名称|
+|quantity|Integer|马赛克的数量|
+
+**请求示例**
+
+```
+http://127.0.0.1:7890/account/mosaic/owned?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH
+```
+
+**返回参数**
+
+```
+{
+        "data": [{
+        "mosaicId": {
+        "namespaceId": "alice.drinks",
+        "name": "orange juice"
+        },
+        "quantity": 123
+        },{
+        "mosaicId": {
+        "namespaceId": "makoto.metal.coins",
+        "name": "silver coin"
+        },
+        "quantity": 8
         }]
 }
 ```
