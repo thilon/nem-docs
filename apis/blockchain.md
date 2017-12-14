@@ -22,7 +22,7 @@ GET /chain/height
 http://127.0.0.1:7890/chain/height
 ```
 
-**返回参数**
+**返回示例**
 
 ```
 {
@@ -54,7 +54,7 @@ GET /chain/score
 http://127.0.0.1:7890/chain/score
 ```
 
-**返回参数**
+**返回示例**
 
 ```
 {
@@ -94,7 +94,7 @@ GET /chain/last-block
 http://127.0.0.1:7890/chain/last-block
 ```
 
-**返回参数**
+**返回示例**
 
 ```
 {
@@ -146,7 +146,7 @@ GET /block/get?blockHash=<block hash>
 http://127.0.0.1:7890/block/get?blockHash=58efa578aea719b644e8d7c731852bb26d8505257e03a897c8102e8c894a99d6
 ```
 
-**返回参数**
+**返回示例**
 
 ```
 {
@@ -200,7 +200,7 @@ POST /block/at/public
 }
 ```
 
-**返回参数**
+**返回示例**
 
 ```
 {
@@ -248,7 +248,7 @@ POST /local/chain/blocks-after
 }
 ```
 
-**返回参数**
+**返回示例**
 
 ```
 {
