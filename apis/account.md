@@ -489,6 +489,7 @@ http://127.0.0.1:7890/account/transfers/all?address=TALICELCD3XPH4FFI5STGGNSNSWP
 ```
 GET /account/namespace/page?address=<account address>&parent=<parent namespace id>&id=<id>&pageSize=<page size>
 ```
+
 **请求参数**
 
 |参数|类型|必填|说明|
@@ -520,6 +521,68 @@ http://127.0.0.1:7890/account/namespace/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPW
         "fqn": "makoto.metal.coins",
         "owner": TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH",
         "height": 13465
+        }]
+}
+```
+
+### 获取账户创建的马赛克定义
+
+**请求语法**
+
+```
+GET /account/mosaic/definition/page?address=<address>&parent=<parent namespace id>&id=<id>
+```
+
+**请求参数**
+
+|参数|类型|必填|说明|
+|:---|:---|:---:|:---|
+|address|String|是|账户地址|
+|parent|String|可选|上级命名空间的id|
+|id|Integer|可选||
+
+**响应参数**
+
+|参数|类型|说明|
+|:---|:---|:---|
+|creator|String|命名空间名称|
+|namespaceId|String|命名空间的id|
+|name|Integer|命名空间的名称|
+|divisibility|Integer|定义马赛克的可分性。如divisibility=3，表示一个马赛克可分割的最小值是0.001，即精确到小数点后3位|
+|initialSupply|Integer|创建马赛克定义时，创建者可以指定一个初始供应值。初始供应值区间为(0,9000000000)，默认值是1000|
+|supplyMutable|Boolean|创建者可以定义马赛克总量是否可以变动。值为"true"或"false",默认值为"false"|
+|transferable|Boolean|马赛克是否可以在除创建者之外的帐户中转移。值为"true"或"false"。如果设置为“false”，则马赛克只能由创建者发送或接收；如果设置为“true”，则马赛克可以在任意账户中转移|
+
+**请求示例**
+
+```
+http://127.0.0.1:7890/account/mosaic/definition/page?address=TD3RXTHBLK6J3UD2BH2PXSOFLPWZOTR34WCG4HXH&parent=makoto.metal.coins
+```
+
+**返回参数**
+
+```
+{
+        "data": [{
+        "creator": "10cfe522fe23c015b8ab24ef6a0c32c5de78eb55b2152ed07b6a092121187100",
+        "id": {
+        "namespaceId": "makoto.metal.coins",
+        "name": "silver coin"
+        },
+        "description": "Real silver coins, pure silver",
+        "properties": [{
+        "name": "divisibility",
+        "value": "0"
+        },{
+        "name": "initialSupply",
+        "value": "1000"
+        },{
+        "name": "supplyMutable",
+        "value": "false"
+        },{
+        "name": "transferable",
+        "value": "true"
+        }]
         }]
 }
 ```
