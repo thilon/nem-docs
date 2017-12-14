@@ -217,3 +217,48 @@ POST /block/at/public
         "height": 42803
 }
 ```
+
+### 获取一组区块
+
+**请求语法**
+
+```
+POST /local/chain/blocks-after
+```
+
+**请求参数**
+
+|参数|类型|必填|说明|
+|:---|:---|:---:|:---|
+|blockHeight|Integer|是|JSON格式的区块链高度。最多获取该高度之后的10个区块|
+
+**响应参数**
+
+|参数|类型|说明|
+|:---|:---|:---|
+|txes|Array|一个区块中包含的一组交易|
+|block|String|区块信息|
+|hash|String|上一个区块的sha3-256Hash值|
+
+**请求示例**
+
+```
+{
+  "height": 2649
+}
+```
+
+**返回参数**
+
+```
+{
+  "data":[{
+    "txes":[{
+      "tx": <ExplorerViewModelTransaction>
+      "tx": <ExplorerViewModelTransaction>
+    }],
+    "block": <Block>
+    "hash":"8ca8a3e01ac0eb482e668fda74141984ba118b027fc5f1f67d2d36a38bf48c49"
+ }]
+}
+```
