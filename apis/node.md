@@ -345,3 +345,77 @@ http://127.0.0.1:7890/node/active-peers/max-chain-height
   "height": 43920
 }
 ```
+
+### 获取节点经验值
+
+从另一个节点获取一个节点经验值的数组。每个节点在内部映射中保存自己与其他节点的经验值。共享经验值
+
+可以选择最诚实的节点通信
+
+**请求语法**
+
+```
+GET /node/experiences
+```
+
+**请求参数**
+
+无
+
+**响应参数**
+
+|参数|类型|说明|
+|:---|:---|:---|
+|application|String|该运行节点的应用名称|
+|version|String|应用的版本号|
+|platform|String|底层平台(OS,Java版本)|
+|protocol|String|通讯协议(HTTP,HTTPS)|
+|port|Integer|端口号|
+|host|String|IP地址|
+|name|String|节点名称|
+|public-key|String|标识节点的公匙|
+|syncs|Integer|节点与远程节点进行同步尝试的次数|
+|experience|Integer|节点经验值的初始值|
+|s|Integer|和远程节点通讯成功的次数|
+|f|Integer|和远程节点通讯失败的次数|
+
+**请求示例**
+
+```
+http://127.0.0.1:7890/node/experiences
+```
+
+**响应示例**
+
+```
+{
+       "data": [
+       {
+              "node": {
+                     "metaData":
+                     {
+                            "application": "NIS",
+                            "version": "0.4.33-BETA",
+                            "platform": "Oracle Corporation (1.8.0_25) on Windows 8"
+                     },
+                     "endpoint":
+                     {
+                            "protocol": "http",
+                            "port": 7890,
+                            "host": "81.224.224.156"
+                     },
+                     "identity":
+                     {
+                            "name": "Alice",
+                            "public-key": "a1aaca6c17a24252e674d155713cdf55996ad00175be4af02a20c67b59f9fe8a"
+                     }
+              },
+              "syncs": 3,
+              "experience":
+              {
+                     "s": 1,
+                     "f": 0
+              }
+       }]
+}
+```
