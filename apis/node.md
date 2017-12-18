@@ -419,3 +419,54 @@ http://127.0.0.1:7890/node/experiences
        }]
 }
 ```
+
+### 引导本地节点
+
+引导本地节点，从而将一个帐户（标识）分配给本地节点
+
+**请求语法**
+
+```
+POST /node/boot
+```
+
+**请求参数**
+
+|参数|类型|必填|说明|
+|:---|:---|:---:|:---|
+|application|String|是|该运行节点的应用名称|
+|protocol|String|是|通讯协议，目前仅支持HTTP|
+|port|String|是|端口号|
+|host|String|是|IP地址|
+|private-key|String|是|用来创建标识的私匙|
+|name|String|是|节点名称|
+
+**响应参数**
+
+无
+
+**请求示例**
+
+```
+{
+       "metaData":
+       {
+              "application":"NIS"
+       },
+       "endpoint":
+       {
+              "protocol":"http",
+              "port":7890,
+              "host":"localhost"
+       },
+       "identity":
+       {
+              "private-key":"a6cbd01d04edecfaef51df9486c111abb6299c764a00206eb1d01f4587491b3f",
+              "name":"Alice"
+       }
+}
+```
+
+**响应示例**
+
+无
