@@ -8,3 +8,4 @@
   - [账号](/apis/account)
   - [区块链](/apis/blockchain)
   - [节点](/apis/node)
+  - [命名空间与马赛克](/apis/namespace_mosaics)
