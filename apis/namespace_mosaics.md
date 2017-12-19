@@ -5,7 +5,7 @@
 **请求语法**
 
 ```
-GET /namespace/root/page
+GET /namespace/roots?id=<id>&pageSize=<pageSize>
 ```
 
 **请求参数**
@@ -63,7 +63,7 @@ http://127.0.0.1:7890/namespace/roots?id=26754&pageSize=35
 **请求语法**
 
 ```
-GET http://127.0.0.1:7890/namespace?namespace=<namespace id>
+GET /namespace?namespace=<namespace id>
 ```
 
 **请求参数**
