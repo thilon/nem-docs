@@ -103,7 +103,7 @@ http://127.0.0.1:7890/namespace?namespace=makoto.metal.coins
 **请求语法**
 
 ```
-GET /namespace/mosaic/definition/page
+GET /namespace/mosaic/definition/page?namespace=<namespace id>&id=<id>&pageSize=<pageSize>
 ```
 
 **请求参数**
