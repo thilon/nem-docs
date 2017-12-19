@@ -70,7 +70,13 @@ NEM支持类似于互联网域名概念的命名空间。命名空间是一个�
   
   > 3.mosaic id：必须用于支付费用的mosaic id。可以指定任何现有的mosaic id。如果创造者要支付的费用是XEM，然后她/他用mosaic id"NEM * XEM"。
   
-  > 4.fee：收费量。
+  > 4.fee：手续费。
+
+除了交易费用外，马赛克还有创建费用。这个费用是支付给所谓的租金帐户，这是一个特殊帐户地址：
+
+  正式网络是：NBMOSAICOD4F54EE5CDMR23CCBGOAM2XSIUX6TRS
+  
+  测试网络是：TBMOSAICOD4F54EE5CDMR23CCBGOAM2XSJBR5OLC
 
 ### 多重签名(Multisig)
 
