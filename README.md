@@ -6,6 +6,10 @@
 
 > NEM新经区块链交流群：669137434
 
+<h2>相关文档</h2>
+
+[NEM v2 投石车版本](https://thilon.github.io/catapult-docs/#/)
+
 ## 感谢为该文档完善做出贡献的网友
 
 churis
